@@ -6,6 +6,9 @@ const forecast = require("./utils/forecast.js");
 
 const app = express();
 
+//port to be listend to by heroku port to be used
+const port = process.env.PORT || 3010;
+
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -88,6 +91,6 @@ app.get("*", (req, res) => {
 // you can only return one response from that request
 // CANNOT set headers after sent to client error that appears
 // if you try to get multiple responses
-app.listen(3010, () => {
-  console.log("Server is up on port 3010.");
+app.listen(port, () => {
+  console.log("Server is up on port " + port);
 });
