@@ -19,7 +19,7 @@ const forecast = (lat, long, callback) => {
       callback(
         undefined,
         `${data.current.weather_descriptions[0]} with a temperature of
-          ${data.current.temperature} degrees
+          ${data.current.temperature} degrees, observed time is
           ${data.current.observation_time}`
       );
     }
