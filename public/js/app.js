@@ -20,6 +20,7 @@ weatherForm.addEventListener("submit", (e) => {
       } else {
         messageOne.textContent = data.location;
         messageTwo.textContent = data.forecast;
+        // console.log("data,forecast", JSON.stringify(data.forecast));
       }
     });
   });

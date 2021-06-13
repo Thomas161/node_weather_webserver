@@ -15,13 +15,12 @@ const forecast = (lat, long, callback) => {
       callback("location not found", undefined);
     } else {
       let data = body || {};
-      //   console.log(data);
+      console.log(data);
       callback(
         undefined,
-        data.current.weather_descriptions[0] +
-          " with a temperature of " +
-          data.current.temperature +
-          " degrees"
+        `${data.current.weather_descriptions[0]} with a temperature of
+          ${data.current.temperature} degrees
+          ${data.current.observation_time}`
       );
     }
   });
